@@ -11,9 +11,10 @@ kubectl create secret docker-registry acrsecret --docker-server=containerpreview
 ```
 
 2. Create an AKS deployment and a service as below
-    ```
+
+```
 kubectl apply -f text-recognition-k8s.yaml
-    ```
+```
 
 Note: 
 
