@@ -9,7 +9,7 @@ Instructions for accessing Azure Cognitive Services - Computer Vision - Text Rec
 ```
 kubectl create secret docker-registry acrsecret --docker-server=containerpreview.azurecr.io --docker-username=<APP_ID> --docker-password=<APP_PASSWORD> --docker-email=<EMAIL>
 ```
-2. Create Computer Vision key in Azure portal and replace "API_KEY" in the AKS configuration text-recognition-k8s.yaml with the valid credentials
+2. Create Computer Vision key in Azure portal and replace billing and API key in the AKS configuration text-recognition-k8s.yaml with the valid credentials
 
 3. Create an AKS deployment and a service as below
 
