@@ -23,7 +23,7 @@ spec:
         - name: Billing
           value: https://westus.api.cognitive.microsoft.com/vision/v2.0
         - name: ApiKey
-          value: 49c8eb082b87427883e2b2cdfdee6caa
+          value: API_KEY
         image: containerpreview.azurecr.io/microsoft/cognitive-services-recognize-text:latest
         name: text-recognition
         ports:
