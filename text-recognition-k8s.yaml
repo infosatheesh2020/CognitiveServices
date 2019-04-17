@@ -1,0 +1,66 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: text-recognition
+  name: text-recognition
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: text-recognition
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        run: text-recognition
+    spec:
+      containers:
+      - env:
+        - name: Eula
+          value: accept
+        - name: Billing
+          value: https://westus.api.cognitive.microsoft.com/vision/v2.0
+        - name: ApiKey
+          value: 49c8eb082b87427883e2b2cdfdee6caa
+        image: containerpreview.azurecr.io/microsoft/cognitive-services-recognize-text:latest
+        name: text-recognition
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+        - name: acrsecret
+status: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: text-recognition
+  name: text-recognition
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: text-recognition
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        run: text-recognition
+    spec:
+      containers:
+      - env:
+        - name: Eula
+          value: accept
+        - name: Billing
+          value: https://westus.api.cognitive.microsoft.com/vision/v2.0
+        - name: ApiKey
+          value: 49c8eb082b87427883e2b2cdfdee6caa
+        image: containerpreview.azurecr.io/microsoft/cognitive-services-recognize-text:latest
+        name: text-recognition
+        ports:
+        - containerPort: 5000
+      imagePullSecrets:
+        - name: acrsecret
+status: {}
