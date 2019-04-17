@@ -5,9 +5,10 @@
 Instructions for accessing Azure Cognitive Services - Computer Vision - Text Recognition can be found in docs: https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/computer-vision-how-to-install-containers
 
 1. Create a Kubernetes secret named "acrsecret" in the cluster with Azure container registry private credentials
-    ```
+
+```
 kubectl create secret docker-registry acrsecret --docker-server=containerpreview.azurecr.io --docker-username=<APP_ID> --docker-password=<APP_PASSWORD> --docker-email=<EMAIL>
-    ```
+```
 
 2. Create an AKS deployment and a service as below
     ```
